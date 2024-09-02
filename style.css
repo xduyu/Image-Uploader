@@ -1,0 +1,52 @@
+body {
+	font-family: Arial, sans-serif;
+	text-align: center;
+	background-color: #f0f0f0;
+}
+
+.container {
+	width: 80%;
+	margin: 40px auto;
+	background-color: #f9f9f9;
+	padding: 20px;
+	border: 1px solid #ddd;
+	border-radius: 10px;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.image-container {
+	margin-top: 20px;
+}
+
+.image-container img {
+	max-width: 100%;
+	height: auto;
+	border-radius: 10px;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+#image-input {
+	margin-bottom: 20px;
+	opacity: 0; /* hide the input field */
+}
+
+.btn-upload {
+	background-color: #333;
+	color: #fff;
+	padding: 5px 10px; /* reduced padding to make the button smaller */
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+	display: block; /* make the button a block element to center it */
+	margin: 0 auto; /* center the button horizontally */
+	width: 100px; /* set a fixed width to make the button smaller */
+}
+
+/* add a pseudo-element to style the file input field */
+#image-input + .btn-upload::before {
+	content: "";
+}
+
+#image-input:focus + .btn-upload {
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
